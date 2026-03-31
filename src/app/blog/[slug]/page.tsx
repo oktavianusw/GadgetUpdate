@@ -75,6 +75,7 @@ export default function BlogPostPage({ params }: Props) {
           <article className="prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-a:text-primary-400 hover:prose-a:text-primary-300 prose-img:rounded-2xl prose-img:border prose-img:border-zinc-800">
             <MDXRemote
               source={content}
+              options={{ blockJS: false }}
               components={{
                 ProductCard: (props: React.ComponentProps<typeof ProductCard>) => (
                   <div className="not-prose my-10">
