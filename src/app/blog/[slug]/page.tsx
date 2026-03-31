@@ -58,21 +58,21 @@ export default function BlogPostPage({ params }: Props) {
         
         {/* Main Article column */}
         <div className="min-w-0">
-          <header className="mb-12 pb-10 border-b border-zinc-900">
-            <span className="inline-block bg-primary-500/10 text-primary-400 border border-primary-500/20 text-xs font-bold tracking-wider uppercase px-3.5 py-1.5 rounded-full mb-6">
+          <header className="mb-12 pb-10 border-b border-zinc-200">
+            <span className="inline-block bg-primary-500/10 text-primary-600 border border-primary-500/20 text-xs font-bold tracking-wider uppercase px-3.5 py-1.5 rounded-full mb-6">
               {CATEGORY_LABELS[frontmatter.category] ?? frontmatter.category}
             </span>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-zinc-900 leading-tight mb-6 tracking-tight">
               {frontmatter.title}
             </h1>
-            <div className="flex flex-wrap items-center gap-4 text-zinc-400 text-sm font-medium">
+            <div className="flex flex-wrap items-center gap-4 text-zinc-500 text-sm font-medium">
               <time dateTime={frontmatter.date}>{formattedDate}</time>
-              <span className="w-1.5 h-1.5 bg-zinc-700 rounded-full" />
+              <span className="w-1.5 h-1.5 bg-zinc-300 rounded-full" />
               <span>Tim Editor</span>
             </div>
           </header>
 
-          <article className="prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-a:text-primary-400 hover:prose-a:text-primary-300 prose-img:rounded-2xl prose-img:border prose-img:border-zinc-800">
+          <article className="prose prose-zinc prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-a:text-primary-600 hover:prose-a:text-primary-500 prose-img:rounded-2xl prose-img:border prose-img:border-zinc-200">
             <MDXRemote
               source={content}
               options={{ blockJS: false }}
@@ -88,8 +88,8 @@ export default function BlogPostPage({ params }: Props) {
 
           {/* Linked Products */}
           {frontmatter.products?.length > 0 && (
-            <section className="mt-16 pt-12 border-t border-zinc-900">
-              <h2 className="text-2xl font-bold text-white mb-8 tracking-tight">Produk Terkait Artikel Ini</h2>
+            <section className="mt-16 pt-12 border-t border-zinc-200">
+              <h2 className="text-2xl font-bold text-zinc-900 mb-8 tracking-tight">Produk Terkait Artikel Ini</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {frontmatter.products.map((product) => (
                   <ProductCard key={product.slug} product={product} refSlug={params.slug} />

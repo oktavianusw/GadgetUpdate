@@ -4,17 +4,17 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 @layer base {
   body {
-    @apply text-zinc-300 bg-[#09090b] selection:bg-primary-500/30 selection:text-white;
+    @apply text-zinc-700 bg-slate-50 selection:bg-primary-500/30 selection:text-black;
   }
 }
 
 .bg-grid {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 32px 32px;
 }

@@ -15,10 +15,10 @@ export default function Navbar() {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 z-50 bg-[#09090b]/80 backdrop-blur-xl border-b border-zinc-900/80">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-zinc-200/80">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <Link href="/" className="font-extrabold text-xl text-white hover:text-primary-500 transition-colors tracking-tight">
+        <Link href="/" className="font-extrabold text-xl text-zinc-900 hover:text-primary-500 transition-colors tracking-tight">
           Gadget<span className="text-primary-500">Update</span>.
         </Link>
 
@@ -30,8 +30,8 @@ export default function Navbar() {
               href={href}
               className={`text-sm font-medium transition-colors ${
                 pathname === href
-                  ? 'text-white'
-                  : 'text-zinc-400 hover:text-zinc-200'
+                  ? 'text-zinc-900'
+                  : 'text-zinc-500 hover:text-zinc-900'
               }`}
             >
               {label}
@@ -41,7 +41,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden p-2 text-zinc-400 hover:text-white"
+          className="md:hidden p-2 text-zinc-500 hover:text-zinc-900"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -59,7 +59,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-zinc-800 bg-[#09090b] px-4 py-3 space-y-2 pb-6">
+        <div className="md:hidden border-t border-zinc-200 bg-white px-4 py-3 space-y-2 pb-6">
           {NAV_LINKS.map(({ href, label }) => (
             <Link
               key={href}
@@ -67,8 +67,8 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className={`block px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
                 pathname === href
-                  ? 'bg-zinc-900 text-white'
-                  : 'text-zinc-400 hover:bg-zinc-900/50 hover:text-zinc-200'
+                  ? 'bg-zinc-100 text-zinc-900'
+                  : 'text-zinc-500 hover:bg-zinc-50 hover:text-zinc-900'
               }`}
             >
               {label}

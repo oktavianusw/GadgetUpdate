@@ -32,7 +32,7 @@ export default function TableOfContents({ headings }: { headings: Heading[] }) {
 
   return (
     <nav className="sticky top-24 text-sm space-y-2 lg:pl-4">
-      <p className="font-bold text-white mb-4 text-xs uppercase tracking-widest">Daftar Isi</p>
+      <p className="font-bold text-zinc-900 mb-4 text-xs uppercase tracking-widest">Daftar Isi</p>
       {headings.map((h) => (
         <a
           key={h.id}
@@ -41,8 +41,8 @@ export default function TableOfContents({ headings }: { headings: Heading[] }) {
             h.level === 3 ? 'pl-6 text-xs' : 'pl-4'
           } ${
             activeId === h.id
-              ? 'border-primary-500 text-primary-400 font-medium'
-              : 'border-transparent text-zinc-500 hover:text-zinc-300 hover:border-zinc-700'
+              ? 'border-primary-500 text-primary-600 font-medium'
+              : 'border-transparent text-zinc-500 hover:text-zinc-900 hover:border-zinc-300'
           }`}
         >
           {h.text}

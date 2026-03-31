@@ -18,7 +18,7 @@ function StarRating({ rating }: { rating: number }) {
         {[1, 2, 3, 4, 5].map((star) => (
           <svg
             key={star}
-            className={`w-4 h-4 ${star <= Math.round(rating) ? 'text-amber-400 drop-shadow-[0_0_2px_rgba(251,191,36,0.5)]' : 'text-zinc-700'}`}
+            className={`w-4 h-4 ${star <= Math.round(rating) ? 'text-amber-400 drop-shadow-[0_0_2px_rgba(251,191,36,0.5)]' : 'text-zinc-200'}`}
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -34,8 +34,8 @@ function StarRating({ rating }: { rating: number }) {
 export default function ProductCard({ product, refSlug }: ProductCardProps) {
   const { name, slug, price, originalPrice, rating, image } = product
   return (
-    <div className="group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-primary-500/10 hover:border-zinc-700 transition-all duration-300 hover:-translate-y-1">
-      <div className="relative aspect-square bg-white border-b border-zinc-800/50 p-6 flex items-center justify-center">
+    <div className="group bg-white border border-zinc-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-primary-500/10 hover:border-zinc-300 transition-all duration-300 hover:-translate-y-1">
+      <div className="relative aspect-square bg-white border-b border-zinc-200 p-6 flex items-center justify-center">
         <Image
           src={image}
           alt={name}
@@ -51,17 +51,17 @@ export default function ProductCard({ product, refSlug }: ProductCardProps) {
       </div>
       <div className="p-5 flex flex-col justify-between" style={{ minHeight: '180px' }}>
         <div className="space-y-3">
-          <h3 className="font-semibold text-lg text-white leading-tight line-clamp-2 group-hover:text-primary-400 transition-colors">{name}</h3>
+          <h3 className="font-semibold text-lg text-zinc-900 leading-tight line-clamp-2 group-hover:text-primary-600 transition-colors">{name}</h3>
           <StarRating rating={rating} />
         </div>
         <div className="mt-4 space-y-4">
           <div>
-            <div className="text-xl font-extrabold text-white tracking-tight">{formatIDR(price)}</div>
+            <div className="text-xl font-extrabold text-zinc-900 tracking-tight">{formatIDR(price)}</div>
             {originalPrice && originalPrice > price && (
               <div className="text-sm font-medium text-zinc-500 line-through mt-0.5">{formatIDR(originalPrice)}</div>
             )}
           </div>
-          <AffiliateButton productSlug={slug} refSlug={refSlug} className="w-full text-sm py-3 rounded-xl bg-zinc-100 hover:bg-white text-zinc-900 shadow-xl shadow-white/5" />
+          <AffiliateButton productSlug={slug} refSlug={refSlug} className="w-full text-sm py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white shadow-xl shadow-zinc-900/10" />
         </div>
       </div>
     </div>

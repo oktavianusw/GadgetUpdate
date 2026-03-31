@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
       {/* ─── HIGhend HERO ─── */}
-      <section className="relative overflow-hidden bg-[#09090b] min-h-[85vh] flex flex-col items-center justify-center border-b border-zinc-900">
+      <section className="relative overflow-hidden bg-slate-50 min-h-[85vh] flex flex-col items-center justify-center border-b border-zinc-200">
         {/* Abstract Grid background */}
         <div className="absolute inset-0 bg-grid opacity-30" style={{ maskImage: 'linear-gradient(to bottom, white, transparent)' }} />
         
@@ -20,19 +20,19 @@ export default function HomePage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-600/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-800 text-sm font-medium text-zinc-300 mb-8 shadow-2xl backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-zinc-200 text-sm font-medium text-zinc-600 mb-8 shadow-2xl backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse" />
             Platform Review Gadget Independen
           </div>
           
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight mb-6">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-zinc-900 tracking-tight leading-tight mb-6">
             Review Mendalam.<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-indigo-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-indigo-600">
               Tanpa Bias.
             </span>
           </h1>
           
-          <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+          <p className="text-lg sm:text-xl text-zinc-600 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
             Eksplorasi artikel dan analisis produk teknologi terbaik untuk membantu kamu mengambil keputusan cerdas sebelum membeli gadget baru.
           </p>
 
@@ -48,7 +48,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/deals"
-              className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 text-zinc-300 font-medium transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white border border-zinc-200 hover:bg-zinc-50 text-zinc-700 font-medium transition-all flex items-center justify-center gap-2"
             >
               Cek Deals Terkini
             </Link>
@@ -65,11 +65,11 @@ export default function HomePage() {
             <div className="flex items-end justify-between mb-10">
               <div className="space-y-1">
                 <p className="text-sm font-semibold tracking-wider text-primary-500 uppercase">Pilihan Editor</p>
-                <h2 className="text-3xl font-bold text-white">
+                <h2 className="text-3xl font-bold text-zinc-900">
                   Artikel Unggulan
                 </h2>
               </div>
-              <Link href="/blog" className="text-sm font-semibold text-zinc-400 hover:text-white transition-colors flex items-center gap-1">
+              <Link href="/blog" className="text-sm font-semibold text-zinc-500 hover:text-zinc-900 transition-colors flex items-center gap-1">
                 Lihat semua <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
@@ -83,7 +83,7 @@ export default function HomePage() {
 
         {/* Deals */}
         {deals.length > 0 && (
-          <section className="bg-zinc-900/50 border border-zinc-800/80 rounded-3xl p-8 sm:p-10 relative overflow-hidden">
+          <section className="bg-white/50 border border-zinc-200/80 rounded-3xl p-8 sm:p-10 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary-600/5 rounded-full blur-[80px]" />
             <div className="relative z-10">
               <div className="flex items-end justify-between mb-10">
@@ -95,11 +95,11 @@ export default function HomePage() {
                       <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
                     </span>
                   </div>
-                  <h2 className="text-3xl font-bold text-white">
+                  <h2 className="text-3xl font-bold text-zinc-900">
                     Tech Deals Hari Ini
                   </h2>
                 </div>
-                <Link href="/deals" className="text-sm font-semibold text-zinc-400 hover:text-white transition-colors gap-1 hidden sm:flex items-center">
+                <Link href="/deals" className="text-sm font-semibold text-zinc-500 hover:text-zinc-900 transition-colors gap-1 hidden sm:flex items-center">
                   Eksplor deals <span aria-hidden="true">&rarr;</span>
                 </Link>
               </div>
@@ -115,7 +115,7 @@ export default function HomePage() {
         {/* Latest */}
         {latest.length > 0 && featured.length === 0 && (
           <section>
-            <h2 className="text-3xl font-bold text-white mb-8">
+            <h2 className="text-3xl font-bold text-zinc-900 mb-8">
               Terbaru dari Kami
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
